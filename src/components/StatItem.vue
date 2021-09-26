@@ -1,10 +1,10 @@
 <template>
   <li>
-    <p class="text-light-blue-darker">
+    <p class="text-sm text-center text-light-blue-darker sm:text-base md:text-left">
       {{statName}}
     </p>
 
-    <p class="text-3xl font-bold text-light-black mt-1">
+    <p class="mt-1 text-lg font-bold text-center sm:text-3xl text-light-black md:text-left">
       {{statValue}}
     </p>
   </li>
