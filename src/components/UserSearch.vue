@@ -17,9 +17,12 @@ export default {
     return {
       userData: {
         name: 'The Ocotcat',
-        login: '@octocat',
+        login: 'octocat',
         avatar_url: 'https://avatars.githubusercontent.com/u/583231?v=4',
-        created_at: '25 Jan 2011'
+        created_at: '25 Jan 2011',
+        company: "Github",
+        html_url: "https://github.com/octocat",
+        location: "San Francisco"
       }
     }
   },
@@ -46,7 +49,7 @@ export default {
         return response = response.json()
       }).then( response => {
         return this.userData = response
-      } ).catch(err => console.log(err.message));
+      }).catch(err => console.log(err.message));
     }
 
   },
@@ -59,5 +62,4 @@ export default {
 </script>
 
 <style>
-
 </style>

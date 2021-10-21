@@ -7,8 +7,7 @@
         {{location}}
       </p>
 
-      <p
-        class="disabled"
+      <p class="disabled"
         v-else
       >
         No Location
@@ -18,9 +17,9 @@
     <div class="flex items-center space-x-4">
       <TwitterIcon/>
 
-      <p v-if="twitter" >
+      <a class="block" :href="twitterLink" v-if="twitter" target="_blank" rel="noreferrer" aria-label="To Twitter">
         {{twitter}}
-      </p>
+      </a>
 
       <p
         class="disabled"
@@ -33,8 +32,8 @@
     <div class="flex items-center space-x-4">
       <WebsiteIcon/>
       <div>
-        <a v-if="githubUrl" :href="githubUrl" class="hover:underline">
-          {{githubUrl}}
+        <a v-if="github" :href="github" class="hover:underline" target="_blank" rel="noreferrer" aria-label="To github Link">
+          {{githubLink}}
         </a>
 
         <p
@@ -81,24 +80,21 @@ export default {
   props: {
     twitter: {
       type: String,
-      default: 'Repos'
     },
-    githubUrl: {
+    github: {
       type: String,
-      default: 'https://github.blog'
     },
     company: {
       type: String,
-      default: 'No company'
     },
     location: {
       type: String,
-      default: 'San Francisco'
     },
   },
 
+
   updated() {
-    console.log(this.githubUrl.length > 1)
+    console.log(this.company)
   },
 
 
@@ -109,6 +105,16 @@ export default {
       } else {
         return false
       }
+    },
+
+    githubLink: function() {
+      const githubURL = "https://github.com/";
+      return this.github.replace(githubURL, '')
+    },
+
+    twitterLink: function() {
+      const twitterURL = "https://twitter.com/";
+      return twitterURL + this.twitter;
     }
   }
 }

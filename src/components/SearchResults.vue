@@ -60,7 +60,7 @@
         <LinkSection
           :location = "userData.location"
           :twitter= "userData.twitter_username"
-          :githubUrl = "userData.html_url"
+          :github = "userData.html_url"
           :company = "userData.company"
         ></LinkSection>
       </div>
@@ -81,9 +81,7 @@ export default {
   computed: {
     joinDate: function() {
       let date = new Date( this.userData.created_at)
-
       let formattedDate = date.toLocaleString('default', {day: 'numeric', month: 'long', year: 'numeric'})
-
       return formattedDate
     }
 
