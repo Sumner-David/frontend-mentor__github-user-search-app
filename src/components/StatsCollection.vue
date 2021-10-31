@@ -12,7 +12,6 @@
 
 import StatItem from '@/components/StatItem.vue'
 
-
 export default {
   components: {
     StatItem

@@ -3,7 +3,7 @@
     <div class="grid w-full h-full grid-cols-5 gap-8">
       <div class="flex-shrink-0 hidden md:block">
         <div class="w-32 h-32 overflow-hidden rounded-full">
-          <img :src="userData.avatar_url" class="object-cover w-full h-full" alt="">
+          <img :src="userData.avatar_url" class="object-cover w-full h-full" v-if="userData.avatar_url" alt="Profile Image">
         </div>
       </div>
 
@@ -12,7 +12,7 @@
           <div class="flex items-center justify-between md:items-start">
             <div class="mr-4 sm:mr-8 md:hidden">
               <div class="w-20 h-20 overflow-hidden rounded-full sm:w-24 sm:h-24">
-                <img :src="userData.avatar_url"  class="object-cover w-full h-full shadow-xl" alt="">
+                <img :src="userData.avatar_url" class="object-cover w-full h-full shadow-xl" alt="Profile Image" v-if="userData.avatar_url" >
               </div>
             </div>
             <div class="justify-between w-full md:flex">
@@ -26,12 +26,12 @@
                   </span>
                 </h2>
 
-                <p class="transition-colors text-light-blue dark:text-dark-blue">
+                <p class="transition-colors text-light-blue dark:text-dark-blue" v-if="userData.login">
                   @{{userData.login}}
                 </p>
               </div>
 
-              <p class="pt-2 mt-2 text-sm transition-colors sm:pt-0 sm:mt-0 sm:text-lg text-light-blue-darker">
+              <p class="pt-2 mt-2 text-sm transition-colors sm:pt-0 sm:mt-0 sm:text-lg text-light-blue-darker" v-if="userData.created_at">
                 Joined {{joinDate}}
               </p>
             </div>
