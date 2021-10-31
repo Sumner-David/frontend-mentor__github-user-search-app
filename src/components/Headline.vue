@@ -1,10 +1,9 @@
 <template>
   <div :class="isDarkMode">
-    <div class="flex justify-between font-sans font-bold">
-      <h1 class="text-3xl font-bold transition-colors text-light-black dark:text-dark-white">
+    <div class="flex flex-wrap justify-between font-sans font-bold">
+      <h1 class="py-2 pr-2 text-3xl font-bold transition-colors text-light-black dark:text-dark-white">
         Dev Finder
       </h1>
-
 
       <button v-if="!darkMode" @click="toggleModes" class="flex items-center space-x-6">
         <p class="text-xl font-semibold">

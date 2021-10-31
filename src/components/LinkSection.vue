@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 text-light-blue-darker">
+  <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 text-light-blue-darker dark:text-light-gray">
 
     <div class="flex items-center space-x-4">
       <LocationIcon/>

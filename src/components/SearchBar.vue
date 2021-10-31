@@ -1,6 +1,6 @@
 <template>
   <form
-    class="flex items-center justify-between w-full p-3 rounded-lg shadow-lg bg-light-white"
+    class="flex items-center justify-between w-full p-3 transition-colors rounded-lg shadow-lg bg-light-white dark:bg-dark-blue-darker"
     @submit.prevent= "handleSubmit"
   >
     <div
@@ -8,7 +8,7 @@
     >
       <SearchIcon styling="h-6 sm:h-8 text-light-blue w-4 w-auto"/>
 
-      <input v-model="username" class="w-full h-full pl-2 mr-4 text-xl placeholder:text-opacity-70" placeholder="Search Gitub..." />
+      <input v-model="username" class="w-full h-full pl-2 mr-4 text-xl transition-colors bg-transparent dark:text-dark-white placeholder:text-opacity-70" placeholder="Search Gitub..." />
     </div>
 
     <button class="flex-shrink-0 px-4 py-2 ml-4 font-sans text-lg font-bold text-white transition-all rounded-lg md:px-8 md:py-3 opacity-90 bg-light-blue hover:opacity-100">

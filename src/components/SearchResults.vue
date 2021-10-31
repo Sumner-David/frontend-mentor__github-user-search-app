@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6 rounded-lg shadow-lg sm:p-8 bg-light-white">
+  <div class="p-6 transition-colors rounded-lg shadow-lg sm:p-8 bg-light-white dark:bg-dark-blue-darker">
     <div class="grid w-full h-full grid-cols-5 gap-8">
       <div class="flex-shrink-0 hidden md:block">
         <div class="w-32 h-32 overflow-hidden rounded-full">
@@ -12,12 +12,12 @@
           <div class="flex items-center justify-between md:items-start">
             <div class="mr-4 sm:mr-8 md:hidden">
               <div class="w-20 h-20 overflow-hidden rounded-full sm:w-24 sm:h-24">
-                <img :src="userData.avatar_url"  class="object-cover w-full h-full" alt="">
+                <img :src="userData.avatar_url"  class="object-cover w-full h-full shadow-xl" alt="">
               </div>
             </div>
             <div class="justify-between w-full md:flex">
               <div>
-                <h2 class="font-bold sm:text-2xl md:text-3xl">
+                <h2 class="font-bold transition-colors sm:text-2xl md:text-3xl dark:text-dark-white">
                   <span v-if="userData.name">
                     {{userData.name}}
                   </span>
@@ -26,24 +26,24 @@
                   </span>
                 </h2>
 
-                <p class="text-light-blue">
+                <p class="transition-colors text-light-blue dark:text-dark-blue">
                   @{{userData.login}}
                 </p>
               </div>
 
-              <p class="pt-2 mt-2 text-sm sm:pt-0 sm:mt-0 sm:text-lg text-light-blue-darker">
+              <p class="pt-2 mt-2 text-sm transition-colors sm:pt-0 sm:mt-0 sm:text-lg text-light-blue-darker">
                 Joined {{joinDate}}
               </p>
             </div>
           </div>
 
-          <div class="text-light-blue-darkest">
+          <div class="transition-colors text-light-blue-darkest dark:text-light-gray">
             <p v-if="userData.bio">
               {{userData.bio}}
             </p>
 
             <p v-else>
-              No Bio.... How mysterious!
+              This Profile has no bio 🤔
             </p>
           </div>
         </div>

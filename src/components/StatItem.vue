@@ -4,7 +4,7 @@
       {{statName}}
     </p>
 
-    <p class="mt-1 text-lg font-bold text-center sm:text-3xl text-light-black md:text-left">
+    <p class="mt-1 text-lg font-bold text-center transition-colors sm:text-3xl text-light-black md:text-left dark:text-light-gray">
       {{statValue}}
     </p>
   </li>
