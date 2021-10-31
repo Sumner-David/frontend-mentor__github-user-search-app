@@ -12,22 +12,18 @@
 </template>
 
 <script>
-export default {
+  export default {
 
-  props: {
-    statName: {
-      type: String,
-      default: 'Repos'
-    },
-    statValue: {
-      type: Number,
-      default: 42
+    props: {
+      statName: {
+        type: String,
+        default: 'Repos'
+      },
+      statValue: {
+        type: Number,
+        default: 42
+      }
     }
+
   }
-
-}
 </script>
-
-<style>
-
-</style>

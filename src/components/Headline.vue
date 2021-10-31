@@ -24,7 +24,6 @@
           <SunIcon styling="w-6 h-6"></SunIcon>
         </p>
       </button>
-
     </div>
   </div>
 </template>

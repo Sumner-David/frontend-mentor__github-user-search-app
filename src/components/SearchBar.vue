@@ -3,9 +3,7 @@
     class="flex items-center justify-between w-full p-3 transition-colors rounded-lg shadow-lg bg-light-white dark:bg-dark-blue-darker"
     @submit.prevent= "handleSubmit"
   >
-    <div
-      class="flex items-center w-full h-full pl-2 space-x-4 md:space-x-6 md:pl-4"
-    >
+    <div class="flex items-center w-full h-full pl-2 space-x-4 md:space-x-6 md:pl-4">
       <SearchIcon styling="h-6 sm:h-8 text-light-blue w-4 w-auto"/>
 
       <input v-model="username" class="w-full h-full pl-2 mr-4 text-xl transition-colors bg-transparent dark:text-dark-white placeholder:text-opacity-70" placeholder="Search Gitub..." />

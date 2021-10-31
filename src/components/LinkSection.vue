@@ -62,64 +62,57 @@
 </template>
 
 <script>
+  import LocationIcon from '@/components/svg_components/LocationIcon'
+  import WebsiteIcon from '@/components/svg_components/WebsiteIcon'
+  import TwitterIcon from '@/components/svg_components/TwitterIcon'
+  import CompanyIcon from '@/components/svg_components/CompanyIcon'
 
-import LocationIcon from '@/components/svg_components/LocationIcon'
-import WebsiteIcon from '@/components/svg_components/WebsiteIcon'
-import TwitterIcon from '@/components/svg_components/TwitterIcon'
-import CompanyIcon from '@/components/svg_components/CompanyIcon'
 
-
-export default {
-  components: {
-    LocationIcon,
-    WebsiteIcon,
-    TwitterIcon,
-    CompanyIcon,
-  },
-
-  props: {
-    twitter: {
-      type: String,
+  export default {
+    components: {
+      LocationIcon,
+      WebsiteIcon,
+      TwitterIcon,
+      CompanyIcon,
     },
-    github: {
-      type: String,
+
+    props: {
+      twitter: {
+        type: String,
+      },
+      github: {
+        type: String,
+      },
+      company: {
+        type: String,
+      },
+      location: {
+        type: String,
+      },
     },
-    company: {
-      type: String,
+
+    updated() {
+      console.log(this.company)
     },
-    location: {
-      type: String,
-    },
-  },
 
+    computed: {
+      hasTwitter: function() {
+        if(this.twitter) {
+          return true
+        } else {
+          return false
+        }
+      },
 
-  updated() {
-    console.log(this.company)
-  },
+      githubLink: function() {
+        const githubURL = "https://github.com/";
+        return this.github.replace(githubURL, '')
+      },
 
-
-  computed: {
-    hasTwitter: function() {
-      if(this.twitter) {
-        return true
-      } else {
-        return false
+      twitterLink: function() {
+        const twitterURL = "https://twitter.com/";
+        return twitterURL + this.twitter;
       }
-    },
-
-    githubLink: function() {
-      const githubURL = "https://github.com/";
-      return this.github.replace(githubURL, '')
-    },
-
-    twitterLink: function() {
-      const twitterURL = "https://twitter.com/";
-      return twitterURL + this.twitter;
     }
   }
-}
 </script>
-
-<style>
-
-</style>

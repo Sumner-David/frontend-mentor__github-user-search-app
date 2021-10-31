@@ -10,7 +10,6 @@
 import SearchBar from '@/components/SearchBar.vue'
 import SearchResults from '@/components/SearchResults.vue'
 
-
 export default {
 
   data() {

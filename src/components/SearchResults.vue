@@ -76,8 +76,6 @@ import StatsCollection from '@/components/StatsCollection.vue'
 import LinkSection from '@/components/LinkSection.vue'
 
 export default {
-
-
   computed: {
     joinDate: function() {
       let date = new Date( this.userData.created_at)
@@ -100,7 +98,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>
