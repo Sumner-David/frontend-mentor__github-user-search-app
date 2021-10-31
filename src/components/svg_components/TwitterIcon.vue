@@ -6,14 +6,14 @@
 </template>
 
 <script>
-export default {
 
+export default {
   props: {
     styling: {
       type: String,
       default: 'w-5 h-auto'
     }
-  }
+  },
 
 }
 </script>

@@ -1,25 +1,66 @@
 <template>
-  <div>
+  <div :class="isDarkMode">
     <div class="flex justify-between font-sans font-bold">
-      <h1 class="text-light-black font-bold text-3xl">
+      <h1 class="text-3xl font-bold transition-colors text-light-black dark:text-dark-white">
         Dev Finder
       </h1>
 
-      <div class="flex items-center space-x-6">
-        <p class="text-xl">
+
+      <button v-if="!darkMode" @click="toggleModes" class="flex items-center space-x-6">
+        <p class="text-xl font-semibold">
           Dark
         </p>
-      </div>
+
+        <p>
+          <MoonIcon styling="text-light-blue-darker w-6 h-6"></MoonIcon>
+        </p>
+      </button>
+
+      <button v-else @click="toggleModes" class="flex items-center space-x-6 text-dark-white">
+        <p class="text-xl font-semibold">
+          Light
+        </p>
+
+        <p>
+          <SunIcon styling="w-6 h-6"></SunIcon>
+        </p>
+      </button>
+
     </div>
   </div>
 </template>
 
 <script>
-export default {
+  import MoonIcon from '@/components/svg_components/MoonIcon'
+  import SunIcon from '@/components/svg_components/SunIcon'
 
-}
+  export default {
+    components: {
+      MoonIcon,
+      SunIcon
+    },
+
+    props: {
+      darkMode: {
+        type: Boolean,
+        default: true
+      }
+    },
+
+    computed: {
+      isDarkMode: function() {
+        if (this.darkMode) {
+          return 'dark'
+        } else
+        return ''
+      },
+    },
+
+    methods: {
+      toggleModes: function() {
+        console.log('toggleMode clicked')
+        this.$emit('toggleMode')
+      }
+    }
+  }
 </script>
-
-<style>
-
-</style>

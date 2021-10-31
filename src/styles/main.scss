@@ -1,9 +1,7 @@
 
-
 h1,h2,h3,h4,h5 {
   @apply font-sans
 }
-
 
 .disabled {
   @apply opacity-50 pointer-events-none text-gray-700

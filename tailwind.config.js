@@ -18,7 +18,7 @@ module.exports = {
     },
   },
 
-  darkmode: 'class',
+  darkMode: 'class',
 
   theme: {
     container: {
